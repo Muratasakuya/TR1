@@ -20,6 +20,7 @@ GameScene::GameScene() {
 GameScene::~GameScene() {
 
 	// 解放
+	openCV_->Finalize();
 	openCV_.reset();
 }
 
@@ -29,8 +30,9 @@ GameScene::~GameScene() {
 void GameScene::Initialize() {
 
 	/*======================================================*/
-	// 今はない
+	// OepnCV
 
+	openCV_->Initialize();
 }
 
 //============================================================
@@ -51,6 +53,8 @@ void GameScene::Update() {
 void GameScene::Draw() {
 
 	/*======================================================*/
-	// 今はない
+	// OepnCV
+
+	openCV_->Draw();
 
 }
