@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\DirectXGame">
+      <UniqueIdentifier>{a89eedf9-e188-4a09-8066-845885b5db61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\DirectXGame\DirectXCommon">
+      <UniqueIdentifier>{7d8357e3-9875-48a2-9ad9-a2e9841b39bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\DirectXGame\Logger">
+      <UniqueIdentifier>{0a8ca9c1-f111-4c70-b1d2-2b45d4f759a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\DirectXGame\WinApp">
+      <UniqueIdentifier>{026b0c9e-33c0-4e68-b0b2-0770c3e1a654}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="WinApp\WinApp.cpp">
+      <Filter>ソース ファイル\DirectXGame\WinApp</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXCommon\DirectXCommon.cpp">
+      <Filter>ソース ファイル\DirectXGame\DirectXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Logger\Logger.cpp">
+      <Filter>ソース ファイル\DirectXGame\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\VertexObject\VertexObject.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\MyMath\Matrix\Matrix4x4.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Triangle\Triangle.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Camera\Camera.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_demo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_draw.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_impl_dx12.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_tables.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_widgets.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ImGuiManager\ImGuiManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="System\System.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\TextureManager\TextureManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Sphere\Sphere.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\MyMath\Function\Function.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\GameScene\GameScene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Sprite\Sprite.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\MyMath\Matrix\Matrix3x3.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="3D\Bunny\Bunny.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexResource\VertexResource.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\SceneManager\SceneManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\IScene\IScene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipeline\Pipeline.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ModelManager\ModelManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="3D\Plane\Plane.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="3D\Teapot\Teapot.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="3D\Suzanne\Suzanne.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WinApp\WinApp.h">
+      <Filter>ソース ファイル\DirectXGame\WinApp</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXCommon\DirectXCommon.h">
+      <Filter>ソース ファイル\DirectXGame\DirectXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Logger\Logger.h">
+      <Filter>ソース ファイル\DirectXGame\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\VertexObject\VertexObject.h" />
+    <ClInclude Include="Lib\MyMath\Vector\Vector.h" />
+    <ClInclude Include="Lib\MyMath\Matrix\Matrix4x4.h" />
+    <ClInclude Include="Entities\Triangle\Triangle.h" />
+    <ClInclude Include="Lib\Camera\Camera.h" />
+    <ClInclude Include="Externals\imgui\imconfig.h" />
+    <ClInclude Include="Externals\imgui\imgui.h" />
+    <ClInclude Include="Externals\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="Externals\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Externals\imgui\imgui_internal.h" />
+    <ClInclude Include="Externals\imgui\imstb_textedit.h" />
+    <ClInclude Include="Externals\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Externals\imgui\imstb_truetype.h" />
+    <ClInclude Include="Managers\ImGuiManager\ImGuiManager.h" />
+    <ClInclude Include="System\System.h" />
+    <ClInclude Include="Lib\ComPtr\ComPtr.h" />
+    <ClInclude Include="Managers\TextureManager\TextureManager.h" />
+    <ClInclude Include="Entities\Sphere\Sphere.h" />
+    <ClInclude Include="Lib\MyMath\Function\Function.h" />
+    <ClInclude Include="Scenes\GameScene\GameScene.h" />
+    <ClInclude Include="Entities\Sprite\Sprite.h" />
+    <ClInclude Include="Lib\MyMath\Matrix\Matrix3x3.h" />
+    <ClInclude Include="3D\Bunny\Bunny.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="VertexResource\VertexResource.h" />
+    <ClInclude Include="Managers\SceneManager\SceneManager.h" />
+    <ClInclude Include="Scenes\IScene\IScene.h" />
+    <ClInclude Include="Pipeline\Pipeline.h" />
+    <ClInclude Include="Managers\ModelManager\ModelManager.h" />
+    <ClInclude Include="3D\Plane\Plane.h" />
+    <ClInclude Include="3D\Teapot\Teapot.h" />
+    <ClInclude Include="3D\Suzanne\Suzanne.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Externals\imgui\LICENSE.txt" />
+  </ItemGroup>
+</Project>
