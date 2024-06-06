@@ -10,6 +10,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "Function.h"
+
 /// cvの省略
 using namespace cv;
 
