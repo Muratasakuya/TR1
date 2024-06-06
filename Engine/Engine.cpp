@@ -228,10 +228,10 @@ namespace {
 		textureManager_->LoadTexture("marioTexture", "./Resources/Images/mario.png");
 
 		// モデルの読み込み
-		modelManager_->LoadModel("bunny", "./Resources/Obj", "bunny.obj");
+		/*modelManager_->LoadModel("bunny", "./Resources/Obj", "bunny.obj");
 		modelManager_->LoadModel("plane", "./Resources/Obj", "plane.obj");
 		modelManager_->LoadModel("teapot", "./Resources/Obj", "teapot.obj");
-		modelManager_->LoadModel("suzanne", "./Resources/Obj", "suzanne.obj");
+		modelManager_->LoadModel("suzanne", "./Resources/Obj", "suzanne.obj");*/
 
 		// パイプライン各種生成
 		pipeline_ = std::make_unique<Pipeline>();
@@ -240,7 +240,7 @@ namespace {
 		// 三角形メッシュ生成
 		CreateMeshes();
 		// モデル生成
-		CreateModels("bunny", "plane", "teapot", "suzanne");
+		//CreateModels("bunny", "plane", "teapot", "suzanne");
 	}
 
 	//============================================================
