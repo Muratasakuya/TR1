@@ -43,9 +43,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExternalIncludePath>C:\Users\k023g\2024A\TR\Externals\opencv\build\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\Users\k023g\2024A\TR\Externals\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
@@ -54,13 +58,14 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(ProjectDir)/VertexResource;$(ProjectDir)/Pipeline;$(ProjectDir)/3D/Suzanne;$(ProjectDir)/3D/Teapot;$(ProjectDir)/3D/Plane;$(ProjectDir)/3D/Bunny;$(ProjectDir)/Scenes/IScene;$(ProjectDir)/Scenes/TitleScene;$(ProjectDir)/Scenes/GameScene;$(ProjectDir)/Scenes/ParticleScene;$(ProjectDir)/Scenes/TransitionScene;$(ProjectDir)/ResourceObject;$(ProjectDir)/Engine;$(ProjectDir)/System;$(ProjectDir)/Managers/GameSceneManager;$(ProjectDir)/Managers/SceneManager;$(ProjectDir)/Managers/ModelManager;$(ProjectDir)/Managers/TextureManager;$(ProjectDir)/Managers/ImGuiManager;$(ProjectDir)/Externals/DirectXTex;$(ProjectDir)/Externals/imgui;$(ProjectDir)/Lib/ComPtr;$(ProjectDir)/Lib/Logger;$(ProjectDir)/Lib/Camera;$(ProjectDir)/Lib/MyMath/Function;$(ProjectDir)/Lib/MyMath/Matrix;$(ProjectDir)/Lib/MyMath/Vector;$(ProjectDir)/Objects/Particle;$(ProjectDir)/Objects/Background;$(ProjectDir)/Entities/Sphere;$(ProjectDir)/Entities/Sprite;$(ProjectDir)/Entities/VertexObject;$(ProjectDir)/Entities/BreakTriangle;$(ProjectDir)/Entities/Triangle;$(ProjectDir)/PSO;$(ProjectDir)/DirectXCommon;$(ProjectDir)/Logger;$(ProjectDir)/WinApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/VertexResource;$(ProjectDir)/Pipeline;$(ProjectDir)/3D/Suzanne;$(ProjectDir)/3D/Teapot;$(ProjectDir)/3D/Plane;$(ProjectDir)/3D/Bunny;$(ProjectDir)/Scenes/IScene;$(ProjectDir)/Scenes/TitleScene;$(ProjectDir)/Scenes/GameScene;$(ProjectDir)/Scenes/ParticleScene;$(ProjectDir)/Scenes/TransitionScene;$(ProjectDir)/ResourceObject;$(ProjectDir)/Engine;$(ProjectDir)/System;$(ProjectDir)/Managers/GameSceneManager;$(ProjectDir)/Managers/SceneManager;$(ProjectDir)/Managers/ModelManager;$(ProjectDir)/Managers/TextureManager;$(ProjectDir)/Managers/ImGuiManager;$(ProjectDir)/Externals/DirectXTex;$(ProjectDir)/Externals/imgui;$(ProjectDir)/Lib/OpenCV;$(ProjectDir)/Lib/ComPtr;$(ProjectDir)/Lib/Logger;$(ProjectDir)/Lib/Camera;$(ProjectDir)/Lib/MyMath/Function;$(ProjectDir)/Lib/MyMath/Matrix;$(ProjectDir)/Lib/MyMath/Vector;$(ProjectDir)/Objects/Particle;$(ProjectDir)/Objects/Background;$(ProjectDir)/Entities/Sphere;$(ProjectDir)/Entities/Sprite;$(ProjectDir)/Entities/VertexObject;$(ProjectDir)/Entities/BreakTriangle;$(ProjectDir)/Entities/Triangle;$(ProjectDir)/PSO;$(ProjectDir)/DirectXCommon;$(ProjectDir)/Logger;$(ProjectDir)/WinApp;$(ProjectDir)/Externals/curl-8.7.1/include;$(ProjectDir)/Externals/opencv/build/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/ignore:4049 %(AdditionalOptions)</AdditionalOptions>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>opencv_world490d.lib;opencv_world490.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"
@@ -115,6 +120,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Externals\imgui\imgui_tables.cpp" />
     <ClCompile Include="Externals\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Managers\ModelManager\ModelManager.cpp" />
+    <ClCompile Include="Lib\OpenCV\OpenCV.cpp" />
     <ClCompile Include="Pipeline\Pipeline.cpp" />
     <ClCompile Include="3D\Plane\Plane.cpp" />
     <ClCompile Include="Scenes\IScene\IScene.cpp" />
@@ -143,6 +149,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Managers\ModelManager\ModelManager.h" />
+    <ClInclude Include="Lib\OpenCV\OpenCV.h" />
     <ClInclude Include="Pipeline\Pipeline.h" />
     <ClInclude Include="3D\Plane\Plane.h" />
     <ClInclude Include="Scenes\IScene\IScene.h" />
