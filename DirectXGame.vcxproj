@@ -45,7 +45,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExternalIncludePath>C:\Users\k023g\2024A\TR\Externals\opencv\build\include;$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\k023g\2024A\TR\Externals\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\k023g\2024A\TR\Externals\opencv\build\x64\vc17\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -66,7 +66,7 @@
       <AdditionalOptions>/ignore:4049 %(AdditionalOptions)</AdditionalOptions>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
       <AdditionalDependencies>opencv_world4100d.lib;opencv_world4100.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)/Externals/OpenSSL-Win64\lib\VC\x64\MTd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)/Externals/OpenSSL-Win64\lib\VC\x64\MD;$(ProjectDir)/Externals/OpenSSL-Win64\lib\VC\x64\MDt;$(ProjectDir)/Externals/OpenSSL-Win64\lib\VC\x64\MT;$(ProjectDir)/Externals/OpenSSL-Win64\lib\VC\x64\MTd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"

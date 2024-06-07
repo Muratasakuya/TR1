@@ -39,7 +39,7 @@ public:
 	// コンストラクタ
 	OpenCV();
 	// デストラクタ
-	~OpenCV() {};
+	~OpenCV();
 
 	// 初期化
 	void Initialize();
@@ -69,12 +69,9 @@ private:
 		mask2_,    // 赤色の第2範囲に該当するピクセルを抽出するためのマスク(バイナリ画像)の保持
 		mask_;     // mask1とmask2を論理和(OR)した結果を保持するマスク(バイナリ画像)の保持
 
-	// 中心座標
-	Vector2d centerPos_;
+	// QRコード検出器
+	cv::QRCodeDetector qrDecoder_;
 
-	// 検出できたかどうか
-	bool isFound_;
-
-	// 終了フラグ
-	bool isFinish_;
+	// デコード結果を保持する変数
+	std::string decodedText_;
 };

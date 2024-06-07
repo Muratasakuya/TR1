@@ -11,7 +11,7 @@ GameScene::GameScene() {
 	// OpenCV
 
 	// 生成
-	//openCV_ = std::make_unique<OpenCV>();
+	openCV_ = std::make_unique<OpenCV>();
 
 	/*======================================================*/
 	// OpenSSL SHA256 ハッシュ
@@ -36,8 +36,8 @@ GameScene::GameScene() {
 GameScene::~GameScene() {
 
 	// 解放
-	//openCV_->Finalize();
-	//openCV_.reset();
+	openCV_->Finalize();
+	openCV_.reset();
 	sha_.clear();
 }
 
@@ -49,7 +49,7 @@ void GameScene::Initialize() {
 	/*======================================================*/
 	// OepnCV
 
-	//openCV_->Initialize();
+	openCV_->Initialize();
 }
 
 //============================================================
@@ -73,7 +73,7 @@ void GameScene::Update() {
 	/*======================================================*/
 	// OpenCV
 
-	//openCV_->Update();
+	openCV_->Update();
 
 }
 
@@ -85,6 +85,6 @@ void GameScene::Draw() {
 	/*======================================================*/
 	// OepnCV
 
-	//openCV_->Draw();
+	openCV_->Draw();
 
 }
