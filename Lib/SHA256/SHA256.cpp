@@ -62,6 +62,7 @@ std::string SHA256::GetTypeHash() const {
 
 	auto it = typeToString.find(hajikiSpec_.type);
 	if (it != typeToString.end()) {
+
 		return CreateHash(it->second);
 	}
 
