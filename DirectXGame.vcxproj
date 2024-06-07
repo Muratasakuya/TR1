@@ -58,7 +58,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(ProjectDir)/VertexResource;$(ProjectDir)/Pipeline;$(ProjectDir)/3D/Suzanne;$(ProjectDir)/3D/Teapot;$(ProjectDir)/3D/Plane;$(ProjectDir)/3D/Bunny;$(ProjectDir)/Scenes/IScene;$(ProjectDir)/Scenes/TitleScene;$(ProjectDir)/Scenes/GameScene;$(ProjectDir)/Scenes/ParticleScene;$(ProjectDir)/Scenes/TransitionScene;$(ProjectDir)/ResourceObject;$(ProjectDir)/Engine;$(ProjectDir)/System;$(ProjectDir)/Managers/GameSceneManager;$(ProjectDir)/Managers/SceneManager;$(ProjectDir)/Managers/ModelManager;$(ProjectDir)/Managers/TextureManager;$(ProjectDir)/Managers/ImGuiManager;$(ProjectDir)/Externals/DirectXTex;$(ProjectDir)/Externals/imgui;$(ProjectDir)/Lib/OpenCV;$(ProjectDir)/Lib/ComPtr;$(ProjectDir)/Lib/Logger;$(ProjectDir)/Lib/Camera;$(ProjectDir)/Lib/MyMath/Function;$(ProjectDir)/Lib/MyMath/Matrix;$(ProjectDir)/Lib/MyMath/Vector;$(ProjectDir)/Objects/Particle;$(ProjectDir)/Objects/Background;$(ProjectDir)/Entities/Sphere;$(ProjectDir)/Entities/Sprite;$(ProjectDir)/Entities/VertexObject;$(ProjectDir)/Entities/BreakTriangle;$(ProjectDir)/Entities/Triangle;$(ProjectDir)/PSO;$(ProjectDir)/DirectXCommon;$(ProjectDir)/Logger;$(ProjectDir)/WinApp;$(ProjectDir)/Externals/opencv/build/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/VertexResource;$(ProjectDir)/Pipeline;$(ProjectDir)/3D/Suzanne;$(ProjectDir)/3D/Teapot;$(ProjectDir)/3D/Plane;$(ProjectDir)/3D/Bunny;$(ProjectDir)/Scenes/IScene;$(ProjectDir)/Scenes/TitleScene;$(ProjectDir)/Scenes/GameScene;$(ProjectDir)/Scenes/ParticleScene;$(ProjectDir)/Scenes/TransitionScene;$(ProjectDir)/ResourceObject;$(ProjectDir)/Engine;$(ProjectDir)/System;$(ProjectDir)/Managers/GameSceneManager;$(ProjectDir)/Managers/SceneManager;$(ProjectDir)/Managers/ModelManager;$(ProjectDir)/Managers/TextureManager;$(ProjectDir)/Managers/ImGuiManager;$(ProjectDir)/Externals/DirectXTex;$(ProjectDir)/Externals/imgui;$(ProjectDir)/Lib/SHA256;$(ProjectDir)/Lib/OpenCV;$(ProjectDir)/Lib/ComPtr;$(ProjectDir)/Lib/Logger;$(ProjectDir)/Lib/Camera;$(ProjectDir)/Lib/MyMath/Function;$(ProjectDir)/Lib/MyMath/Matrix;$(ProjectDir)/Lib/MyMath/Vector;$(ProjectDir)/Objects/Particle;$(ProjectDir)/Objects/Background;$(ProjectDir)/Entities/Sphere;$(ProjectDir)/Entities/Sprite;$(ProjectDir)/Entities/VertexObject;$(ProjectDir)/Entities/BreakTriangle;$(ProjectDir)/Entities/Triangle;$(ProjectDir)/PSO;$(ProjectDir)/DirectXCommon;$(ProjectDir)/Logger;$(ProjectDir)/WinApp;$(ProjectDir)/Externals/opencv/build/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -138,6 +138,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Entities\Sphere\Sphere.cpp" />
     <ClCompile Include="Entities\Sprite\Sprite.cpp" />
     <ClCompile Include="3D\Suzanne\Suzanne.cpp" />
+    <ClCompile Include="Lib\SHA256\SHA256.cpp" />
     <ClCompile Include="System\System.cpp" />
     <ClCompile Include="Managers\TextureManager\TextureManager.cpp" />
     <ClCompile Include="Entities\Triangle\Triangle.cpp" />
@@ -176,6 +177,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="Entities\Sphere\Sphere.h" />
     <ClInclude Include="Entities\Sprite\Sprite.h" />
     <ClInclude Include="3D\Suzanne\Suzanne.h" />
+    <ClInclude Include="Lib\SHA256\SHA256.h" />
     <ClInclude Include="System\System.h" />
     <ClInclude Include="Managers\TextureManager\TextureManager.h" />
     <ClInclude Include="Entities\Triangle\Triangle.h" />
