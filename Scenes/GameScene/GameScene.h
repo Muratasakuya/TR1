@@ -23,6 +23,8 @@
 
 /// OpenCV
 #include "OpenCV.h"
+/// OpenSSL SHA256 ハッシュ
+#include "SHA256.h"
 
 /// Base
 #include "IScene.h"
@@ -57,4 +59,10 @@ private:
 	
 	// インスタンス
 	std::unique_ptr<OpenCV> openCV_;
+
+	/*----------------------------------------------------------------------*/
+	// OpenSSL SHA256 ハッシュ
+
+	// インスタンス
+	std::vector<std::unique_ptr<SHA256>> sha_;
 };
