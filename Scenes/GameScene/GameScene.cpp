@@ -70,6 +70,40 @@ void GameScene::Update() {
 
 	ImGui::End();
 
+	ImGui::Begin("QRCode");
+
+	// 新しいQRコードデータを取得
+	std::string qrCodeData = openCV_->GetQRCodeData();
+	if (!qrCodeData.empty()) {
+		// すでに同じタイプのものがあるかどうかをチェック
+		if (std::find(keepQRCodeData_.begin(), keepQRCodeData_.end(), qrCodeData) == keepQRCodeData_.end()) {
+
+			keepQRCodeData_.push_back(qrCodeData);
+		}
+	}
+
+	// QRコードの値を表示
+	for (const auto& data : keepQRCodeData_) {
+
+		bool found = false;
+		for (const auto& sha : sha_) {
+			if (data == sha->GetTypeHash()) {
+
+				// QRコードの値がshaのハッシュ値と一致する場合、TypeNameを表示
+				ImGui::Text("QRCodeHash: %s (same Type: %s)", data.c_str(), sha->GetTypeName().c_str());
+				found = true;
+				break;
+			}
+		}
+		if (!found) {
+
+			// 一致するものがなかったらTypeNONEでQRコードの値を表示
+			ImGui::Text("QRCodeHash: %s (same Type: NONE)", data.c_str());
+		}
+	}
+
+	ImGui::End();
+
 	/*======================================================*/
 	// OpenCV
 

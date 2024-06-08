@@ -6,6 +6,7 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/objdetect/objdetect.hpp>
 
+#include <vector>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -53,6 +54,10 @@ public:
 	// 終了処理
 	void Finalize();
 
+	// getter
+
+	std::string GetQRCodeData();
+
 private:
 	//====================
 	// private
@@ -74,4 +79,6 @@ private:
 
 	// デコード結果を保持する変数
 	std::string decodedText_;
+	// 複数のQRコードデータを保持するベクター
+	std::vector<std::string> qrCodeData_;
 };

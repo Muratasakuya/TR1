@@ -55,14 +55,12 @@ void OpenCV::Update() {
 	cv::GaussianBlur(frame_, frame_, cv::Size(5, 5), 0);
 
 	// QRコードの検出とデコード
-	//decodedText_ = qrDecoder_.detectAndDecode(frame_);
-	// ランタイムライブラリエラー、治し方が分からない。
-	// 上のコードがあるとランタイムライブラリエラーが出て実行不可
-	// 考えられる問題, MTdなど、OpenCVと異なる、これが本命
-	// メモリ不足とかネットに書いて合ったけどそれはない、ほぼ
+	decodedText_ = qrDecoder_.detectAndDecode(frame_);
 
 	if (!decodedText_.empty()) {
-		std::cout << "Decoded QR Code: " << decodedText_ << std::endl;
+
+		// 新しいQRコードデータを追加
+		qrCodeData_.push_back(decodedText_);
 	}
 }
 
@@ -73,11 +71,6 @@ void OpenCV::Draw() {
 
 	// 画像(今回はカメラのフレーム)、ウィンドウの表示
 	cv::imshow("OpenCV Window", frame_);
-
-	// デコードしたQRコードのテキストを表示
-	if (!decodedText_.empty()) {
-		cv::putText(frame_, decodedText_, cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(0, 255, 0), 2);
-	}
 }
 
 //============================================================
@@ -89,4 +82,22 @@ void OpenCV::Finalize() {
 		cap_.release();
 	}
 	cv::destroyAllWindows();
+}
+
+//============================================================
+// 複数のQRコードデータを取得
+//============================================================
+std::string OpenCV::GetQRCodeData() {
+
+	if (!qrCodeData_.empty()) {
+
+		// 最新のデータを取得
+		std::string data = qrCodeData_.back(); 
+
+		// 取得したデータを削除
+		qrCodeData_.pop_back();
+
+		return data;
+	}
+	return "";
 }

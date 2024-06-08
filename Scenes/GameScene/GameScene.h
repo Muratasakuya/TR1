@@ -60,6 +60,9 @@ private:
 	// インスタンス
 	std::unique_ptr<OpenCV> openCV_;
 
+	// 複数のQRコードデータを保持するためのベクター
+	std::vector<std::string> keepQRCodeData_;
+
 	/*----------------------------------------------------------------------*/
 	// OpenSSL SHA256 ハッシュ
 
