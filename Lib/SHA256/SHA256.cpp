@@ -38,7 +38,6 @@ std::string SHA256::CreateHash(const std::string& input) {
 
 	EVP_MD_CTX_free(context);
 
-	// Convert the hash to a hex string
 	std::stringstream ss;
 	for (unsigned int i = 0; i < lengthOfHash; ++i) {
 		ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
